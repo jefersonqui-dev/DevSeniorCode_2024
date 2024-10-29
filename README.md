@@ -1,23 +1,5 @@
-## Folder Structure
+## Estructura de Carpetas 
 
-The workspace contains two folders by default, where:
-Modulo1: the folder to maintain sources
 
-- Modulo1/
-  - EjerciciosResueltos/
-    * Clase02/
-      + CreaTuMantra.class
-      + CreaTuMantra.java
-      + ImprimirCara.class
-      + ImprimirCara.java
-      + ImprimirDiamante.class
-      + ImprimirDiamante.java
-    * Clase03/
-      + Expresiones.class
-      + Expresiones.java
-      + VariablesTipoDatos.class
-      + VariablesTipoDatos.java
-  - Pensamiento Lógico Computacional/
-    * SistemaCompraTechShop.psc
-- Modulo2/
 
+![tree2](https://github.com/user-attachments/assets/caf93e52-9272-46cf-a003-cc5d5eb26ca1)
