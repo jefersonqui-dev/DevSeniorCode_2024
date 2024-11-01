@@ -20,8 +20,21 @@ public class EjerciciosClase03 {
         // Ejercicio8();
         // DrawLine();
         // Ejercicio9();
+        // DrawLine();
+        // Ejercicio10();
+        // DrawLine();
+        // Ejercicio11();
+        // DrawLine();
+        // Ejercicio12();
+        // DrawLine();
+        // Ejercicio13();
+        // DrawLine();
+        // Ejercicio14();
+        // DrawLine();
+        // Ejercicio15();
         DrawLine();
-        Ejercicio10();
+        Ejercicio16();
+        DrawLine();
     }
 
     public static void Ejercicio1() {
@@ -168,7 +181,8 @@ public class EjerciciosClase03 {
         // entrada.close();
 
     }
-    public static void Ejercicio9(){
+
+    public static void Ejercicio9() {
         Scanner entrada = new Scanner(System.in);
         System.out.println("Ingrese su La cantidad de Camisetas: Obtendra el precio segun los descuentos");
         System.out.print("Cantidad de Camisetas: ");
@@ -193,28 +207,148 @@ public class EjerciciosClase03 {
         } else {
             System.out.println("No eligio la cantidad");
         }
-        //entrada.close();
+        // entrada.close();
     }
+
     public static void Ejercicio10() {
         Scanner entrada = new Scanner(System.in);
-        System.out.println("Ingrese un numero del 1 al 12( meses del año): Obtendra el numero de dias correspondientes");
+        System.out
+                .println("Ingrese un numero del 1 al 12( meses del año): Obtendra el numero de dias correspondientes");
         System.out.print("Numero del mes: ");
         var mes = entrada.nextInt();
 
-        if(mes == 1 || mes == 3 || mes == 5 || mes == 7 || mes == 8 || mes == 10 || mes == 10 || mes == 12){
+        if (mes == 1 || mes == 3 || mes == 5 || mes == 7 || mes == 8 || mes == 10 || mes == 10 || mes == 12) {
             System.out.println("El numero de dias es: 31");
-        }
-        else if(mes == 4 || mes == 6 || mes == 9 || mes == 11){
+        } else if (mes == 4 || mes == 6 || mes == 9 || mes == 11) {
             System.out.println("El numero de dias es: 30");
-        }
-        else if(mes == 2){
+        } else if (mes == 2) {
             System.out.println("El numero de dias es: 28");
-        }
-        else{
+        } else {
             System.out.println("Numero no valido");
         }
 
-        //entrada.close();
+        // entrada.close();
+    }
+
+    public static void Ejercicio11() {
+        Scanner entrada = new Scanner(System.in);
+        System.out.println("Ingrese 3 Numeros enteros y diferentes: Los visualizara en orden ascendente:");
+        System.out.print("Numero 1: ");
+        var numero1 = entrada.nextInt();
+        System.out.print("Numero 2: ");
+        var numero2 = entrada.nextInt();
+        System.out.print("Numero 3: ");
+        var numero3 = entrada.nextInt();
+        var mayor = (numero1 > numero2) ? (numero1 > numero3 ? numero1 : numero3)
+                : (numero2 > numero3 ? numero2 : numero3);
+
+        var menor = (numero1 < numero2) ? (numero1 < numero3 ? numero1 : numero3)
+                : (numero2 < numero3 ? numero2 : numero3);
+
+        var medio = (numero1 != mayor && numero1 != menor) ? numero1
+                : ((numero2 != mayor && numero2 != menor) ? numero2 : numero3);
+
+        System.out.println("En orden ascendente: " + menor + medio + mayor);
+        // entrada.close();
+
+    }
+
+    public static void Ejercicio12() {
+        Scanner entrada = new Scanner(System.in);
+        System.out.println("Ingrese el peso de la Sandia: Determinara si puede dividirla en pares");
+        System.out.print("Peso: ");
+        var peso = entrada.nextInt();
+
+        String resultado = (peso % 2 == 0) ? "SI" : "NO";
+        System.out.println(resultado);
+
+        // entrada.close();
+    }
+
+    public static void Ejercicio13() {
+
+    }
+
+    public static void Ejercicio14() {
+        Scanner entrada = new Scanner(System.in);
+        System.out.println("Ingrese un numero: Determinara el cubo de este: Digite un numero negativo Para finalizar");
+
+        float numero;
+        do {
+            System.out.print("Ingrese un numero: ");
+            numero = entrada.nextInt();
+            if (numero >= 0) {
+                float cubo = numero * numero * numero;
+                System.out.println("Cubo: " + cubo);
+            }
+        }
+
+        while (numero >= 0);
+        System.out.println("Ha Finalizado.");
+        // entrada.close();
+    }
+
+    public static void Ejercicio15() {
+        Scanner entrada = new Scanner(System.in);
+        System.out.println("Ingrese un numero: Determinara si es Positivo o negativo: Ingrese 0 para salir");
+
+        float numero;
+        do {
+            System.out.print("Ingrese un numero: ");
+            numero = entrada.nextFloat();
+            if (numero > 0) {
+                System.out.println("El numero es positivo");
+            } else if (numero < 0) {
+                System.out.println("El numero es negativo");
+            } else {
+                System.out.println("Ha Finalizado.");
+            }
+        }
+
+        while (numero > 0 || numero < 0);
+
+        // entrada.close();
+    }
+
+    public static void Ejercicio16() {
+        Scanner entrada = new Scanner(System.in);
+        System.out.println("Ingrese un numero negativo: Digite uno positivo para finalizar ");
+
+        float numero;
+        int contadorNegativos = 0;
+        do {
+            System.out.print("Ingrese un numero: ");
+            numero = entrada.nextFloat();
+            if (numero < 0) {
+                contadorNegativos++;
+            } else {
+                System.out.println("Ha Finalizado");
+            }
+        }
+        while (numero < 0);
+        System.out.println("Cantidad de numeros negativos Ingresados: " + contadorNegativos);
+
+        // entrada.close();
+    }
+
+    public static void Ejercicio17() {
+
+    }
+
+    public static void Ejercicio18() {
+
+    }
+
+    public static void Ejercicio19() {
+
+    }
+
+    public static void Ejercicio20() {
+
+    }
+
+    public static void Ejercicio21() {
+
     }
 
     public static void DrawLine() {
