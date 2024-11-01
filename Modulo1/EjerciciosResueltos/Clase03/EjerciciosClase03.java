@@ -2,21 +2,26 @@ import java.util.Scanner;
 
 public class EjerciciosClase03 {
     public static void main(String[] args) throws Exception {
+        // DrawLine();
+        // Ejercicio1();
+        // DrawLine();
+        // Ejercicio2();
+        // DrawLine();
+        // Ejercicio3();
+        // DrawLine();
+        // Ejercicio4();
+        // DrawLine();
+        // Ejercicio5();
+        // DrawLine();
+        // Ejercicio6();
+        // DrawLine();
+        // Ejercicio7();
+        // DrawLine();
+        // Ejercicio8();
+        // DrawLine();
+        // Ejercicio9();
         DrawLine();
-        Ejercicio1();
-        DrawLine();
-        Ejercicio2();
-        DrawLine();
-        Ejercicio3();
-        DrawLine();
-        Ejercicio4();
-        DrawLine();
-        Ejercicio5();
-        DrawLine();
-        Ejercicio6();
-        DrawLine();
-        Ejercicio7();
-        DrawLine();
+        Ejercicio10();
     }
 
     public static void Ejercicio1() {
@@ -34,7 +39,7 @@ public class EjerciciosClase03 {
         } else {
             System.out.println("Expresion no valida");
         }
-        //entrada.close();
+        // entrada.close();
 
     }
 
@@ -54,7 +59,7 @@ public class EjerciciosClase03 {
 
         System.out.println("El mayor es: " + mayor);
 
-        //entrada.close();
+        // entrada.close();
     }
 
     public static void Ejercicio3() {
@@ -67,7 +72,7 @@ public class EjerciciosClase03 {
         String resultado = (numero % 2 == 0) ? "Par" : "Impar";
         System.out.println("El numero es: " + resultado);
 
-        //entrada.close();
+        // entrada.close();
     }
 
     public static void Ejercicio4() {
@@ -83,7 +88,7 @@ public class EjerciciosClase03 {
         } else {
             System.out.println("La entrada no es una letra.");
         }
-       // entrada.close();
+        // entrada.close();
     }
 
     public static void Ejercicio5() {
@@ -100,7 +105,7 @@ public class EjerciciosClase03 {
             System.out.println("La Letra es una consonante");
         }
 
-        //entrada.close();
+        // entrada.close();
     }
 
     public static void Ejercicio6() {
@@ -113,19 +118,105 @@ public class EjerciciosClase03 {
         } else {
             System.out.println("El numero no es divisible por 2 y 7");
         }
-      //  entrada.close();
+        // entrada.close();
     }
 
     public static void Ejercicio7() {
         // Basandome en la Desigualdad Triangular
-        //Debemos cumplir tres condiciones
+        // Debemos cumplir tres condiciones
         // 1. a + b > c
         // 2. a + c > b
         // 3. b + c > a
+        Scanner entrada = new Scanner(System.in);
+        System.out.println("Ingresa tres longitudes: Determinaras sin con ellas se puede formar un triangulo");
+        System.out.print("Longitud 1: ");
+        var long1 = entrada.nextFloat();
+        System.out.print("Longitud 2: ");
+        var long2 = entrada.nextFloat();
+        System.out.print("Longitud 3: ");
+        var long3 = entrada.nextFloat();
 
+        if ((long1 + long2 > long3) && (long1 + long3 > long3) && (long2 + long3 < long1)) {
+            System.out.println("Los numeros pueden formar un triangulo");
+        } else {
+            System.out.println("Los numeros no pueden formar un triangulo");
+        }
+        // entrada.close();
+    }
 
+    public static void Ejercicio8() {
+        Scanner entrada = new Scanner(System.in);
+        System.out.println("Ingrese su edad: Determinara La Etapa en que se encuentra");
+        System.out.print("Edad: ");
+        var edad = entrada.nextInt();
+
+        if (edad >= 0 && edad <= 5) {
+            System.out.println("Usted esta en La Etapa de la Primera Infancia");
+        } else if (edad >= 6 && edad <= 11) {
+            System.out.println("Usted esta en la Etapa de la Infancia");
+        } else if (edad >= 12 && edad <= 18) {
+            System.out.println("Usted esta en la Etapa de la Adolecencia");
+        } else if (edad >= 19 && edad <= 26) {
+            System.out.println("Usted esta en la Etapa de la Juventud");
+        } else if (edad >= 27 && edad <= 59) {
+            System.out.println("Usted esta en la Etapa de la Adultez");
+        } else if (edad >= 59) {
+            System.out.println("Usted es una persona Mayor");
+        } else {
+            System.out.println("Usted morirá pronto");
+        }
+        // entrada.close();
 
     }
+    public static void Ejercicio9(){
+        Scanner entrada = new Scanner(System.in);
+        System.out.println("Ingrese su La cantidad de Camisetas: Obtendra el precio segun los descuentos");
+        System.out.print("Cantidad de Camisetas: ");
+        var cantidadCamisetas = entrada.nextInt();
+        var precioTotal = 0;
+
+        if (cantidadCamisetas >= 1 && cantidadCamisetas <= 50) {
+            precioTotal = cantidadCamisetas * 50000;
+            System.out.println("Precio Total: " + precioTotal);
+        } else if (cantidadCamisetas >= 50 && cantidadCamisetas <= 100) {
+            precioTotal = cantidadCamisetas * 45000;
+            System.out.println("Precio Total: " + precioTotal);
+        } else if (cantidadCamisetas >= 100 && cantidadCamisetas <= 150) {
+            precioTotal = cantidadCamisetas * 40000;
+            System.out.println("Precio Total: " + precioTotal);
+        } else if (cantidadCamisetas >= 150 && cantidadCamisetas <= 200) {
+            precioTotal = cantidadCamisetas * 35000;
+            System.out.println("Precio Total: " + precioTotal);
+        } else if (cantidadCamisetas > 200) {
+            precioTotal = cantidadCamisetas * 25000;
+            System.out.println("Precio Total: " + precioTotal);
+        } else {
+            System.out.println("No eligio la cantidad");
+        }
+        //entrada.close();
+    }
+    public static void Ejercicio10() {
+        Scanner entrada = new Scanner(System.in);
+        System.out.println("Ingrese un numero del 1 al 12( meses del año): Obtendra el numero de dias correspondientes");
+        System.out.print("Numero del mes: ");
+        var mes = entrada.nextInt();
+
+        if(mes == 1 || mes == 3 || mes == 5 || mes == 7 || mes == 8 || mes == 10 || mes == 10 || mes == 12){
+            System.out.println("El numero de dias es: 31");
+        }
+        else if(mes == 4 || mes == 6 || mes == 9 || mes == 11){
+            System.out.println("El numero de dias es: 30");
+        }
+        else if(mes == 2){
+            System.out.println("El numero de dias es: 28");
+        }
+        else{
+            System.out.println("Numero no valido");
+        }
+
+        //entrada.close();
+    }
+
     public static void DrawLine() {
         System.out.println("________________________________________________________________");
     }
