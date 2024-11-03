@@ -270,6 +270,13 @@ public class EjerciciosClase03 {
     }
 
     public static void Ejercicio13() {
+        Scanner entrada = new Scanner(System.in); 
+        System.out.print("Ingrese los números de los hermanos que llegaron a tiempo (separados por un espacio): "); 
+        int hermano1 = entrada.nextInt(); 
+        int hermano2 = entrada.nextInt(); 
+        int hermanoTarde = 6 - (hermano1 + hermano2); 
+        System.out.println("El hermano que llega tarde es: " + hermanoTarde); 
+        //entrada.close();
         DrawLine();
     }
 
@@ -441,6 +448,7 @@ public class EjerciciosClase03 {
                 break;
         }
         // entrada.close();
+        DrawLine();
 
     }
 
