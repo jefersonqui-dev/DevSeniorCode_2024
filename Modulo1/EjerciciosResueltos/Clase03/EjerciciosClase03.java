@@ -1,40 +1,32 @@
+import java.util.Random;
 import java.util.Scanner;
 
 public class EjerciciosClase03 {
     public static void main(String[] args) throws Exception {
-        // DrawLine();
-        // Ejercicio1();
-        // DrawLine();
-        // Ejercicio2();
-        // DrawLine();
-        // Ejercicio3();
-        // DrawLine();
-        // Ejercicio4();
-        // DrawLine();
-        // Ejercicio5();
-        // DrawLine();
-        // Ejercicio6();
-        // DrawLine();
-        // Ejercicio7();
-        // DrawLine();
-        // Ejercicio8();
-        // DrawLine();
-        // Ejercicio9();
-        // DrawLine();
-        // Ejercicio10();
-        // DrawLine();
-        // Ejercicio11();
-        // DrawLine();
-        // Ejercicio12();
-        // DrawLine();
-        // Ejercicio13();
-        // DrawLine();
-        // Ejercicio14();
-        // DrawLine();
-        // Ejercicio15();
-        DrawLine();
-        Ejercicio16();
-        DrawLine();
+        
+        Ejercicio1();        
+        Ejercicio2();        
+        Ejercicio3();        
+        Ejercicio4();        
+        Ejercicio5();        
+        Ejercicio6();        
+        Ejercicio7();        
+        Ejercicio8();        
+        Ejercicio9();        
+        Ejercicio10();        
+        Ejercicio11();        
+        Ejercicio12();        
+        Ejercicio13();        
+        Ejercicio14();        
+        Ejercicio15();        
+        Ejercicio16();        
+        Ejercicio17();        
+        Ejercicio18();        
+        Ejercicio19();     
+        Ejercicio20();     
+        Ejercicio21();
+        Ejercicio22();
+        Ejercicio23();
     }
 
     public static void Ejercicio1() {
@@ -53,6 +45,7 @@ public class EjerciciosClase03 {
             System.out.println("Expresion no valida");
         }
         // entrada.close();
+        DrawLine();
 
     }
 
@@ -73,6 +66,7 @@ public class EjerciciosClase03 {
         System.out.println("El mayor es: " + mayor);
 
         // entrada.close();
+        DrawLine();
     }
 
     public static void Ejercicio3() {
@@ -86,6 +80,7 @@ public class EjerciciosClase03 {
         System.out.println("El numero es: " + resultado);
 
         // entrada.close();
+        DrawLine();
     }
 
     public static void Ejercicio4() {
@@ -102,6 +97,7 @@ public class EjerciciosClase03 {
             System.out.println("La entrada no es una letra.");
         }
         // entrada.close();
+        DrawLine();
     }
 
     public static void Ejercicio5() {
@@ -119,6 +115,7 @@ public class EjerciciosClase03 {
         }
 
         // entrada.close();
+        DrawLine();
     }
 
     public static void Ejercicio6() {
@@ -132,6 +129,7 @@ public class EjerciciosClase03 {
             System.out.println("El numero no es divisible por 2 y 7");
         }
         // entrada.close();
+        DrawLine();
     }
 
     public static void Ejercicio7() {
@@ -155,6 +153,7 @@ public class EjerciciosClase03 {
             System.out.println("Los numeros no pueden formar un triangulo");
         }
         // entrada.close();
+        DrawLine();
     }
 
     public static void Ejercicio8() {
@@ -179,6 +178,7 @@ public class EjerciciosClase03 {
             System.out.println("Usted morirá pronto");
         }
         // entrada.close();
+        DrawLine();
 
     }
 
@@ -208,6 +208,7 @@ public class EjerciciosClase03 {
             System.out.println("No eligio la cantidad");
         }
         // entrada.close();
+        DrawLine();
     }
 
     public static void Ejercicio10() {
@@ -228,6 +229,7 @@ public class EjerciciosClase03 {
         }
 
         // entrada.close();
+        DrawLine();
     }
 
     public static void Ejercicio11() {
@@ -250,6 +252,7 @@ public class EjerciciosClase03 {
 
         System.out.println("En orden ascendente: " + menor + medio + mayor);
         // entrada.close();
+        DrawLine();
 
     }
 
@@ -263,10 +266,11 @@ public class EjerciciosClase03 {
         System.out.println(resultado);
 
         // entrada.close();
+        DrawLine();
     }
 
     public static void Ejercicio13() {
-
+        DrawLine();
     }
 
     public static void Ejercicio14() {
@@ -286,6 +290,7 @@ public class EjerciciosClase03 {
         while (numero >= 0);
         System.out.println("Ha Finalizado.");
         // entrada.close();
+        DrawLine();
     }
 
     public static void Ejercicio15() {
@@ -308,6 +313,7 @@ public class EjerciciosClase03 {
         while (numero > 0 || numero < 0);
 
         // entrada.close();
+        DrawLine();
     }
 
     public static void Ejercicio16() {
@@ -324,31 +330,190 @@ public class EjerciciosClase03 {
             } else {
                 System.out.println("Ha Finalizado");
             }
-        }
-        while (numero < 0);
+        } while (numero < 0);
         System.out.println("Cantidad de numeros negativos Ingresados: " + contadorNegativos);
 
         // entrada.close();
+        DrawLine();
     }
 
     public static void Ejercicio17() {
-
+        System.out.println("Se visualizan los numeros del 1 al 100 de 5 en 5: ");
+        int i = 1;
+        while (i <= 100) {
+            if (i % 5 == 0 || i == 1) {
+                System.out.println(i);
+            }
+            i++;
+        }
+        DrawLine();
     }
 
     public static void Ejercicio18() {
+        Random rand = new Random();
+        int[] numeros = new int[120];
+        int sumaPositivos = 0;
+        int sumaNegativos = 0;
+        int cuentaPositivos = 0;
+        int cuentaNegativos = 0;
+        int cuentaCeros = 0;
+        
 
+        for(int i = 0; i < 120; i++){
+            numeros[i] = rand.nextInt(201) - 100;
+            System.out.println( i +". " + numeros[i] + "");
+            if(numeros[i] > 0){
+                sumaPositivos += numeros[i];
+                cuentaPositivos++;
+            }else if(numeros[i] < 0){
+                sumaNegativos += numeros[i];
+                cuentaNegativos++;
+            }else{
+                cuentaCeros++;
+            }
+        }
+        double mediaPositivos = cuentaPositivos == 0 ? 0 : (double) sumaPositivos / cuentaPositivos;
+        double mediaNegativos = cuentaNegativos == 0 ? 0 : (double) sumaNegativos / cuentaNegativos;
+        System.out.println("Suma de valores Positivos: " + sumaPositivos);
+        System.out.println("Suma de valores Negativos: " + sumaNegativos);
+        System.out.printf("Media de numeros positivos: %.2f %n" ,mediaPositivos);
+        System.out.printf("Media de numeros Negativos: %.2f %n" ,mediaNegativos);
+        System.out.println("Cantidad de ceros: " + cuentaCeros);
+    
+
+        DrawLine();
     }
 
     public static void Ejercicio19() {
+        Scanner entrada = new Scanner(System.in);
 
+        System.out.print("Ingrese la cantidad de numeros de Finbonacci que desee: ");
+        int N = entrada.nextInt();
+        int num1 = 0, num2 = 1, num3 = 0;
+        for (int i = 1; i <= N; i++) {
+            System.out.println(num1 + "");
+            num3 = num1 + num2;
+            num1 = num2;
+            num2 = num3;
+        }
+
+        // entrada.close();
+        DrawLine();
     }
 
     public static void Ejercicio20() {
-
+        int tamano = 8;
+        for(int i = 0; i < tamano; i++){
+            for(int j = 0; j < tamano; j++){
+                if((i + j) % 2 == 0){
+                    System.out.print("| B ");
+                }else {
+                    System.out.print("| N ");
+                }
+            }
+            System.out.println("|");
+        } 
+        DrawLine();
     }
 
     public static void Ejercicio21() {
+        Scanner entrada = new Scanner(System.in);
+        System.out.printf("Seleccione la Opcion que desee: %n 1. Millas a Kilometros. %n 2. Kilometros a Millas.%n");
 
+        int opcion = entrada.nextInt();
+        double valor, resultado;
+
+        switch (opcion) {
+            case 1:
+                System.out.print("Ingrese la Cantidad que desea convertir: ");
+                valor = entrada.nextDouble();
+                resultado = (valor) * (1 / 0.621371);
+                System.out.printf("%.2f Millas -> %.2f Kilometros %n", valor, resultado);
+                break;
+            case 2:
+                System.out.print("Ingrese la Cantidad que desea convertir: ");
+                valor = entrada.nextDouble();
+                resultado = (valor) * (1 / 1.60934);
+                System.out.printf("%.2f Kilometros -> %.2f Millas%n", valor, resultado);
+                break;
+            default:
+                System.out.println("No valido");
+                break;
+        }
+        // entrada.close();
+
+    }
+
+    public static void Ejercicio22() {
+        Scanner entrada = new Scanner(System.in);
+        boolean jugarDeNuevo = true;
+        System.out.println("Binvenido a ¡Piedra, Papel o Tijera!");
+        System.out.println("Ingresa El nombre de cada jugador:");
+        System.out.print("Jugador 1: ");
+        String jugador1 = entrada.nextLine();
+        System.out.print("Jugador 2: ");
+        String jugador2 = entrada.nextLine();
+
+        while (jugarDeNuevo) {
+            System.out.println("Ronda 1: Ingresa P(Piedara), L(Papel) y T(Tijera) ");
+            System.out.print(jugador1 + ": ");
+            String jug1 = entrada.nextLine().toUpperCase();
+            System.out.print(jugador2 + ": ");
+            String jug2 = entrada.nextLine().toUpperCase();
+
+            // Determinar el ganador
+            if (jug1.equals(jug2)) {
+                System.out.println("Empate");
+            } else if ((jug1.equals("P") && jug2.equals("T")) ||
+                    (jug1.equals("T") && jug2.equals("L")) ||
+                    (jug1.equals("L") && jug2.equals("P"))) {
+                System.out.println("¡" + jugador1 + " Gana la ronda!");
+            } else {
+                System.out.println("¡" + jugador2 + " Gana la ronda!");
+            }
+            System.out.println("¿Desean jugar de nuevo (S/N): ");
+            String respuesta = entrada.nextLine().toUpperCase();
+            jugarDeNuevo = respuesta.equals("S");
+        }
+        System.out.println("¡Gracias por Jugar!");
+        //entrada.close();
+        DrawLine();
+    }
+
+    public static void Ejercicio23() {
+        Scanner entrada = new Scanner(System.in);
+        System.out.print("Ingrese un número impar positivo para el tamaño del diamante: ");
+        int tamano = entrada.nextInt();
+        do {
+            
+            if (tamano % 2 == 0 || tamano <= 0) {
+                System.out.println("Por favor, ingrese un número impar positivo.");
+                tamano = entrada.nextInt();                
+            }
+        } while (tamano % 2 == 0 || tamano <= 0);
+        int n = tamano / 2;
+                
+        // Parte superior del diamante
+        for (int i = 0; i <= n; i++) {
+            for (int j = 0; j < n - i; j++) {
+                System.out.print(" ");
+            }
+            for (int k = 0; k < 2 * i + 1; k++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        } // Parte inferior del diamante
+        for (int i = n - 1; i >= 0; i--) {
+            for (int j = 0; j < n - i; j++) {
+                System.out.print(" ");
+            }
+            for (int k = 0; k < 2 * i + 1; k++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+        entrada.close();
+        DrawLine();
     }
 
     public static void DrawLine() {
