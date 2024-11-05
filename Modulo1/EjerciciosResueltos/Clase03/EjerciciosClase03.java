@@ -3,27 +3,27 @@ import java.util.Scanner;
 
 public class EjerciciosClase03 {
     public static void main(String[] args) throws Exception {
-        
-        Ejercicio1();        
-        Ejercicio2();        
-        Ejercicio3();        
-        Ejercicio4();        
-        Ejercicio5();        
-        Ejercicio6();        
-        Ejercicio7();        
-        Ejercicio8();        
-        Ejercicio9();        
-        Ejercicio10();        
-        Ejercicio11();        
-        Ejercicio12();        
-        Ejercicio13();        
-        Ejercicio14();        
-        Ejercicio15();        
-        Ejercicio16();        
-        Ejercicio17();        
-        Ejercicio18();        
-        Ejercicio19();     
-        Ejercicio20();     
+
+        Ejercicio1();
+        Ejercicio2();
+        Ejercicio3();
+        Ejercicio4();
+        Ejercicio5();
+        Ejercicio6();
+        Ejercicio7();
+        Ejercicio8();
+        Ejercicio9();
+        Ejercicio10();
+        Ejercicio11();
+        Ejercicio12();
+        Ejercicio13();
+        Ejercicio14();
+        Ejercicio15();
+        Ejercicio16();
+        Ejercicio17();
+        Ejercicio18();
+        Ejercicio19();
+        Ejercicio20();
         Ejercicio21();
         Ejercicio22();
         Ejercicio23();
@@ -270,13 +270,13 @@ public class EjerciciosClase03 {
     }
 
     public static void Ejercicio13() {
-        Scanner entrada = new Scanner(System.in); 
-        System.out.print("Ingrese los números de los hermanos que llegaron a tiempo (separados por un espacio): "); 
-        int hermano1 = entrada.nextInt(); 
-        int hermano2 = entrada.nextInt(); 
-        int hermanoTarde = 6 - (hermano1 + hermano2); 
-        System.out.println("El hermano que llega tarde es: " + hermanoTarde); 
-        //entrada.close();
+        Scanner entrada = new Scanner(System.in);
+        System.out.print("Ingrese los números de los hermanos que llegaron a tiempo (separados por un espacio): ");
+        int hermano1 = entrada.nextInt();
+        int hermano2 = entrada.nextInt();
+        int hermanoTarde = 6 - (hermano1 + hermano2);
+        System.out.println("El hermano que llega tarde es: " + hermanoTarde);
+        // entrada.close();
         DrawLine();
     }
 
@@ -364,18 +364,17 @@ public class EjerciciosClase03 {
         int cuentaPositivos = 0;
         int cuentaNegativos = 0;
         int cuentaCeros = 0;
-        
 
-        for(int i = 0; i < 120; i++){
+        for (int i = 0; i < 120; i++) {
             numeros[i] = rand.nextInt(201) - 100;
-            System.out.println( i +". " + numeros[i] + "");
-            if(numeros[i] > 0){
+            System.out.println(i + ". " + numeros[i] + "");
+            if (numeros[i] > 0) {
                 sumaPositivos += numeros[i];
                 cuentaPositivos++;
-            }else if(numeros[i] < 0){
+            } else if (numeros[i] < 0) {
                 sumaNegativos += numeros[i];
                 cuentaNegativos++;
-            }else{
+            } else {
                 cuentaCeros++;
             }
         }
@@ -383,10 +382,9 @@ public class EjerciciosClase03 {
         double mediaNegativos = cuentaNegativos == 0 ? 0 : (double) sumaNegativos / cuentaNegativos;
         System.out.println("Suma de valores Positivos: " + sumaPositivos);
         System.out.println("Suma de valores Negativos: " + sumaNegativos);
-        System.out.printf("Media de numeros positivos: %.2f %n" ,mediaPositivos);
-        System.out.printf("Media de numeros Negativos: %.2f %n" ,mediaNegativos);
+        System.out.printf("Media de numeros positivos: %.2f %n", mediaPositivos);
+        System.out.printf("Media de numeros Negativos: %.2f %n", mediaNegativos);
         System.out.println("Cantidad de ceros: " + cuentaCeros);
-    
 
         DrawLine();
     }
@@ -410,16 +408,16 @@ public class EjerciciosClase03 {
 
     public static void Ejercicio20() {
         int tamano = 8;
-        for(int i = 0; i < tamano; i++){
-            for(int j = 0; j < tamano; j++){
-                if((i + j) % 2 == 0){
+        for (int i = 0; i < tamano; i++) {
+            for (int j = 0; j < tamano; j++) {
+                if ((i + j) % 2 == 0) {
                     System.out.print("| B ");
-                }else {
+                } else {
                     System.out.print("| N ");
                 }
             }
             System.out.println("|");
-        } 
+        }
         DrawLine();
     }
 
@@ -484,7 +482,7 @@ public class EjerciciosClase03 {
             jugarDeNuevo = respuesta.equals("S");
         }
         System.out.println("¡Gracias por Jugar!");
-        //entrada.close();
+        // entrada.close();
         DrawLine();
     }
 
@@ -493,14 +491,14 @@ public class EjerciciosClase03 {
         System.out.print("Ingrese un número impar positivo para el tamaño del diamante: ");
         int tamano = entrada.nextInt();
         do {
-            
+
             if (tamano % 2 == 0 || tamano <= 0) {
                 System.out.println("Por favor, ingrese un número impar positivo.");
-                tamano = entrada.nextInt();                
+                tamano = entrada.nextInt();
             }
         } while (tamano % 2 == 0 || tamano <= 0);
         int n = tamano / 2;
-                
+
         // Parte superior del diamante
         for (int i = 0; i <= n; i++) {
             for (int j = 0; j < n - i; j++) {
