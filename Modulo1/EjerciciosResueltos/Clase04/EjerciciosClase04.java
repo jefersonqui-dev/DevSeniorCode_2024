@@ -79,10 +79,11 @@ public class EjerciciosClase04 {
     public static void calculoFactorial() {
         Scanner entrada = new Scanner(System.in);
         var numeroEntero = entrada.nextInt();
-
-        for (int i = 0; i <= numeroEntero; i--){
-            System.out.println(i);
+        int resFactorial = 1;
+        for (int i = 1; i <= numeroEntero; ++i){
+            resFactorial *= i;
         }
+        System.out.println(resFactorial);
         entrada.close();
     }
 
