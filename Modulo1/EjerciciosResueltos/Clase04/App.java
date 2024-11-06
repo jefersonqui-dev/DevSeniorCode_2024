@@ -59,9 +59,7 @@ public class App {
         var counter = 0;
         do{
             System.out.println(counter++);
-        }while (counter <= 10);
-           
-        
+        }while (counter <= 10);        
     }
 
     public static void forTest() {
