@@ -115,6 +115,7 @@ public class EjerciciosClase03 {
         }
 
         // entrada.close();
+       
         DrawLine();
     }
 
