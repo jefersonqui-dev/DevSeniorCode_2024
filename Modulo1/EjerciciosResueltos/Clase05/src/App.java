@@ -8,10 +8,10 @@ public class App {
     }
 
     public static int[] operacionesConArrays() {
-        Scanner getValue = new Scanner(System.in);
+        var getValue = new Scanner(System.in);
         System.out.print("Operaciones de un Array: Ingrese el Tamaño: ");
         var arraySize = getValue.nextInt();
-        int[] array = new int[arraySize];
+        int[] array = new int[arraySize];// [0,0,0,0,0]
         for (int i = 0; i <= array.length - 1; i++) {
             System.out.printf("Ingrese el valor en la posicion [%d]: ", i);
             array[i] = getValue.nextInt();
@@ -21,7 +21,8 @@ public class App {
         findMaxValue(array);
         findMinValue(array);
         invertArray(array);
-
+        int[] inverse = sortInDescendingOrder(array);
+        printArray(array);
         getValue.close();
 
         return array;
@@ -65,7 +66,7 @@ public class App {
         System.out.printf("El valor minimo es: %d\n", minValue);
     }
 
-    public static void invertArray(int[] array) {
+    public static int[] invertArray(int[] array) {
         int[] arrayInvert = new int[array.length];
         int pos = array.length - 1;
         for (int i = 0; i <= array.length - 1; i++) {
@@ -74,10 +75,20 @@ public class App {
         }
         printArray(arrayInvert);
         DrawLine();
+        return arrayInvert;
+
     }
 
-    public static void sortInDescendingOrder() {
-
+    public static void sortInDescendingOrder(int[] array) {
+        for (int i = 0; i <= array.length - 1; i++) {
+            for (int j = 0; j <= array.length - 1; j++) {
+                if (array[j] < array[j + 1]) {
+                    int temp = array[j];
+                    array[j] = array[j + 1];
+                    array[j + 1] = temp;
+                }
+            }
+        }
     }
 
     public static void findAverage() {
