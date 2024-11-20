@@ -6,11 +6,9 @@ public class App {
     private static ArrayList<String> tasks = new ArrayList<String>();
 
     public static void main(String[] args) throws Exception {
-        printWelcomeMessage();
-        // operacionesConArrays();
-        // matrizDeRotacion();
-        GestionTareas();
-        DrawLine();
+        operacionesConArrays();
+        matrizDeRotacion();
+
     }
 
     public static int[] operacionesConArrays() {
@@ -169,101 +167,6 @@ public class App {
             System.out.println();
         }
 
-    }
-
-    // Metodo para agregar tareas
-    public static void addTask(String task) {
-        tasks.add(task);
-        System.out.println("Tarea Agregada: " + task);
-    }
-    // Metodo para agregar una tarea completada
-
-    public static void removeTask(int pos) {
-        if (pos >= 0 && pos < tasks.size()) {
-            String taskRemove = tasks.remove(pos);
-            System.out.println("Tarea eliminada: " + taskRemove);
-        } else {
-            System.out.println("posicion invalida.");
-        }
-    }
-
-    public static void mostrarTask() {
-        if (tasks.isEmpty()) {
-            System.out.println("No hay tareas pendientes.");
-        } else {
-            System.out.println("tareas pendientes");
-            for (int i = 0; i < tasks.size(); i++) {
-                System.out.println((i + 1) + " " + tasks.get(i));
-            }
-        }
-    }
-
-    public static void verTask(int pos) {
-        if (pos >= 1 && pos <= tasks.size()) {
-            System.out.println("Tarea en la posicion: " + pos + ":" + tasks.get(pos - 1));
-        } else {
-            System.out.println("Posicion Invalida");
-        }
-    }
-
-    public static void GestionTareas() {
-        int opcion;
-        do {
-            System.out.println("\nGestión de tareas pendientes:");
-            System.out.println("1. Agregar tarea");
-            System.out.println("2. Eliminar tarea completada");
-            System.out.println("3. Mostrar todas las tareas");
-            System.out.println("4. Ver tarea por posición");
-            System.out.println("5. Salir");
-            System.out.print("Elija una opción: ");
-            opcion = request.nextInt();
-            request.nextLine();
-            switch (opcion) {
-                case 1:
-                    // Agregar tarea
-                    System.out.print("Ingrese la tarea: ");
-                    String tarea = request.nextLine();
-                    addTask(tarea);
-                    break;
-
-                case 2:
-                    // Eliminar tarea completada
-                    mostrarTask();
-                    System.out.print("Ingrese la posición de la tarea a eliminar: ");
-                    int posicionEliminar = request.nextInt();
-                    removeTask(posicionEliminar - 1); // Convertir a índice
-                    break;
-
-                case 3:
-                    // Mostrar todas las tareas
-                    mostrarTask();
-                    break;
-
-                case 4:
-                    // Ver tarea por posición
-                    mostrarTask();
-                    System.out.print("Ingrese la posición de la tarea a ver: ");
-                    int posicionVer = request.nextInt();
-                    verTask(posicionVer);
-                    break;
-
-                case 5:
-                    // Salir
-                    System.out.println("¡Hasta luego!");
-                    break;
-
-                default:
-                    System.out.println("Opción no válida. Por favor, intente de nuevo.");
-                    break;
-            }
-        } while (opcion != 5);
-    }
-
-    private static void printWelcomeMessage() {
-        System.out.println("========================================================================");
-        System.out.println("|                      Ejercicios Resueltos Clase 05                   |");
-        System.out.println("========================================================================");
-        System.out.println();
     }
 
     private static void DrawLine() {
