@@ -3,10 +3,10 @@ import java.util.Scanner;
 public class App {
     // Elmentos Necesarios para la mayoria de las acciones
     static Scanner scanner = new Scanner(System.in);
-    static String[] planetas = { "Marte", "Jupiter", "Saturno" };
-    static String[] naves = { "Exploradora", "Carga pesada", "Velocidad Maxima" };
-    static double[] distancias = { 78.0, 628.0, 1256.0 };
-    static double[] velocidades = { 20000.0, 15000.0, 30000.0 };
+    static String[] planetas = { "Mercurio", "Venus", "Marte", "Jupiter", "Saturno", "Urano", "Neptuno", "Venus" };
+    static String[] naves = { "Solaris-Explorer", "Aegis-Protector", "Orion-Supply", "Artemis-Fixer" };
+    static double[] distancias = { 77000.0, 41000.0, 225000.0, 628000000.0, 1275000000.0, 2725000000.0, 4351000000.0 };
+    static double[] velocidades = { 150000.0, 200000.0, 120000.0, 140000 };
 
     public static void main(String[] args) throws Exception {
         int opcion;
