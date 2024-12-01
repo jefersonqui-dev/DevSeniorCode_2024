@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class App {
+public class funcionesArray {
     static Scanner request = new Scanner(System.in);
     private static ArrayList<String> tasks = new ArrayList<String>();
 
