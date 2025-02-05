@@ -4,7 +4,7 @@ public class AnalysisOfStudentGrades {
     static Scanner request = new Scanner(System.in);
 
     public static void main(String[] args) {
-
+        showMenu();
     }
 
     public static void showMenu() {
@@ -25,6 +25,7 @@ public class AnalysisOfStudentGrades {
                 request.nextLine();
                 switch (option) {
                     case 1:
+                        // Mostrar Registro de Calificaciones de Estudiantes
                         showRecord();
                         break;
                     case 2:

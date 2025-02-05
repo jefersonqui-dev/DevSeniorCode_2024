@@ -1,18 +1,31 @@
-## Getting Started
+#Ejercicios Resueltos
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+## Imprimir Cara
 
-## Folder Structure
+Escriba un archivo llamado ImprimirCara que imprima una cara usando caracteres de texto.
 
-The workspace contains two folders by default, where:
+```
+ @@@@@@@
+@| O O |@
+(|  ^  |)
+ | [_] |
+ +-----+
+```
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+## Crea Tu Mantra
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+Este Programa Solicita al usuario que elija una palabra inspiradora, una acción y un objetivo, luego el programa se encarga de generar una frase o mantra que se muestra por consola
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+## Imprimir Diamante
 
-## Dependency Management
+El programa muestra un archivo llamado `ImprimirDiamante` que imprima un diamante usando caracteres de texto.
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+```
+   *
+  ***
+ *****
+*******
+ *****
+  ***
+   *
+```
