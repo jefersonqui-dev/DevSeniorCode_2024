@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descripción del Proyecto</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 20px;
+        }
+        .header, .content, .footer {
+            padding: 20px;
+            background-color: #f4f4f4;
+            border-radius: 5px;
+        }
+        .header {
+            grid-column: span 3;
+            background-color: #e2e2e2;
+        }
+        .content {
+            grid-column: span 2;
+        }
+        .footer {
+            grid-column: span 3;
+            background-color: #e2e2e2;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Descripción del Proyecto</h1>
+        </div>
+        <div class="content">
+            <h2>Acerca del Proyecto</h2>
+            <p>Este proyecto es una demostración de cómo utilizar CSS Grid para crear una página web moderna y receptiva. El diseño de la cuadrícula permite organizar el contenido de manera flexible y eficiente.</p>
+        </div>
+        <div class="footer">
+            <p>&copy; 2023 Proyecto de Demostración</p>
+        </div>
+    </div>
+</body>
+</html>
+
